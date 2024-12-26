@@ -1,0 +1,7 @@
+langchain==0.3.10
+langchain_google_genai==2.0.6
+langchain_community==0.3.10
+faiss-cpu==1.9.0.post1
+python-dotenv==1.0.1
+fastapi==0.115.6
+uvicorn==0.32.1

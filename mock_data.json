@@ -1,0 +1,132 @@
+{
+    "question_1": {
+      "question": "What does 'Reach' represent in Facebook marketing metrics?",
+      "choices": [
+        "A. The total number of times an ad was displayed.",
+        "B. The total number of unique users who saw an ad or post.",
+        "C. The number of clicks on an ad.",
+        "D. The number of conversions from an ad."
+      ],
+      "correct_choice": "B"
+    },
+    "question_2": {
+      "question": "How are 'Impressions' calculated?",
+      "choices": [
+        "A. Directly reported by Facebook.",
+        "B. Total Ad Spend / Number of Conversions",
+        "C. Number of Clicks / Impressions",
+        "D. Total Revenue from Ad / Total Ad Spend"
+      ],
+      "correct_choice": "A"
+    },
+    "question_3": {
+      "question": "What is the formula for CTR (Click-Through Rate)?",
+      "choices": [
+        "A. Number of Conversions / Link Clicks",
+        "B. Number of Clicks / Impressions",
+        "C. Total Ad Spend / Impressions",
+        "D. Total Ad Spend / Link Clicks"
+      ],
+      "correct_choice": "B"
+    },
+    "question_4": {
+      "question": "What metric tracks the total clicks on links within an ad or post?",
+      "choices": [
+        "A. Impressions",
+        "B. Reach",
+        "C. Link Clicks",
+        "D. Conversions"
+      ],
+      "correct_choice": "C"
+    },
+    "question_5": {
+      "question": "How is 'Conversion Rate' calculated?",
+      "choices": [
+        "A. Number of Conversions / Link Clicks",
+        "B. Total Ad Spend / Number of Conversions",
+        "C. Number of Clicks / Impressions",
+        "D. Total Revenue from Ad / Total Ad Spend"
+      ],
+      "correct_choice": "A"
+    },
+    "question_6": {
+      "question": "What does CPM stand for in Facebook marketing?",
+      "choices": [
+        "A. Cost Per Million/Thousand Impressions",
+        "B. Cost Per Click",
+        "C. Cost Per Conversion",
+        "D. Cost Per Reach"
+      ],
+      "correct_choice": "A"
+    },
+    "question_7": {
+      "question": "What is the formula for calculating CPM?",
+      "choices": [
+        "A. Total Ad Spend / Impressions",
+        "B. Total Ad Spend / Link Clicks",
+        "C. Total Ad Spend / Number of Conversions",
+        "D. Total Revenue from Ad / Total Ad Spend"
+      ],
+      "correct_choice": "A"
+    },
+    "question_8": {
+      "question": "What does CPC stand for?",
+      "choices": [
+        "A. Cost Per Conversion",
+        "B. Cost Per Click",
+        "C. Cost Per Mille",
+        "D. Cost Per Reach"
+      ],
+      "correct_choice": "B"
+    },
+    "question_9": {
+      "question": "How is CPC calculated?",
+      "choices": [
+        "A. Total Ad Spend / Impressions",
+        "B. Total Ad Spend / Link Clicks",
+        "C. Total Ad Spend / Number of Conversions",
+        "D. Total Revenue from Ad / Total Ad Spend"
+      ],
+      "correct_choice": "B"
+    },
+    "question_10": {
+      "question": "What metric represents the average cost for each conversion?",
+      "choices": [
+        "A. CPC",
+        "B. CPM",
+        "C. CPR",
+        "D. ROAS"
+      ],
+      "correct_choice": "C"
+    },
+    "question_11": {
+      "question": "What is the formula for CPR (Cost Per Conversion)?",
+      "choices": [
+        "A. Total Ad Spend / Impressions",
+        "B. Total Ad Spend / Link Clicks",
+        "C. Total Ad Spend / Number of Conversions",
+        "D. Total Revenue from Ad / Total Ad Spend"
+      ],
+      "correct_choice": "C"
+    },
+    "question_12": {
+      "question": "What does ROAS stand for?",
+      "choices": [
+        "A. Return On Ad Spend",
+        "B. Reach On Ad Spend",
+        "C. Revenue On Average Spend",
+        "D. Rate Of Ad Spend"
+      ],
+      "correct_choice": "A"
+    },
+    "question_13": {
+      "question": "How is ROAS calculated?",
+      "choices": [
+        "A. Total Ad Spend / Impressions",
+        "B. Total Ad Spend / Link Clicks",
+        "C. Total Ad Spend / Number of Conversions",
+        "D. Total Revenue from Ad / Total Ad Spend"
+      ],
+      "correct_choice": "D"
+    }
+  }
