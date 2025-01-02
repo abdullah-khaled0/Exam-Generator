@@ -5,13 +5,11 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
 
-
 import os
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from PyPDF2 import PdfReader
 
 from dotenv import load_dotenv
-
 
 
 
