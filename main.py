@@ -16,6 +16,15 @@ from dotenv import load_dotenv
 
 app = FastAPI()
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Google API setup
 load_dotenv()  # Load environment variables from .env file
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
