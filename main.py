@@ -5,36 +5,47 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
 
-from pydantic import BaseModel
-import os
 
-from fastapi import FastAPI, HTTPException
+import os
+from fastapi import FastAPI, File, UploadFile, HTTPException
+from PyPDF2 import PdfReader
+
+from dotenv import load_dotenv
+
 
 
 
 
 app = FastAPI()
 
-
-# Input model for query
-class QueryRequest(BaseModel):
-    query: str
-
 # Google API setup
-from dotenv import load_dotenv
-
 load_dotenv()  # Load environment variables from .env file
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY is not set. Please set it as an environment variable.")
 
-
 embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
 llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash")
 
+def extract_text_from_pdf(file: UploadFile) -> str:
+    """
+    Extract text from a PDF file.
+    
+    Args:
+        file (UploadFile): The uploaded PDF file.
+    
+    Returns:
+        str: Extracted text from the PDF.
+    """
+    try:
+        pdf_reader = PdfReader(file.file)
+        text = ""
+        for page in pdf_reader.pages:
+            text += page.extract_text()
+        return text
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Error reading PDF: {str(e)}")
 
-class TextRequest(BaseModel):
-    text: str
 
 
 def create_quiz_from_text(text: str) -> dict:
@@ -87,10 +98,25 @@ def create_quiz_from_text(text: str) -> dict:
     response = rag_chain.invoke("")
     return response
 
-@app.post("/create-quiz")
-async def create_quiz(request: TextRequest):
+@app.post("/upload-pdf")
+async def upload_pdf(file: UploadFile = File(...)):
+    """
+    Endpoint to upload a PDF file and generate a quiz from its content.
+
+    Args:
+        file (UploadFile): The uploaded PDF file.
+
+    Returns:
+        dict: Generated quiz.
+    """
     try:
-        text = request.text
+        if not file.filename.endswith(".pdf"):
+            raise HTTPException(status_code=400, detail="Invalid file type. Only PDF files are allowed.")
+
+        # Extract text from the uploaded PDF
+        text = extract_text_from_pdf(file)
+        
+        # Generate the quiz from extracted text
         quiz = create_quiz_from_text(text)
         return {"quiz": quiz}
     except Exception as e:
