@@ -4,6 +4,12 @@ This project is a FastAPI-based application that generates multiple-choice quizz
 
 ---
 
+## 📹 Demo
+![Demo](demo.gif)
+> Check out the application in action!
+
+
+---
 ## Features
 
 - **PDF Upload**: Upload PDF files to extract their textual content via a Flutter app interface.
